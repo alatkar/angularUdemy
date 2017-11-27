@@ -1,0 +1,9 @@
+<span
+  class="glyphicon"
+  [class.glyphicon-heart] = "isFav"
+  [class.glyphicon-heart-empty] = "!isFav"
+  [class.highlighted] = "isActive"
+  (click) = "onClick()"
+> {{count}}</span>
+<span>{{message}} </span>
+

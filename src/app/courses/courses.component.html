@@ -1,0 +1,38 @@
+
+  <div class="courses">
+    <button class="btn btn-primary" [class.active]="isActive" >save</button>
+    <div (click)="onSaveDiv($event)">
+      <button (click)="onSave($event)" [style.backgroundColor]="isActive ? 'red' : 'green'" >save</button>
+    </div>  
+    <input #var1 (keyup.enter)="onKeyUpNew(var1.value)">
+    <input [value]="email" (keyup.enter)="email = $event.target.value; onKeyUpNew1()">
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUpNew1()">
+    <div>
+    {{course.title | uppercase}} <br/>
+    {{course.students | number}} <br/>
+    {{course.rating | number:'1.2-2'}} <br/>
+    {{course.price | currency:'INR':true:'2.2-2'}} <br/>
+    {{course.releaseDate| date: 'shortDate'}} <br/>
+
+    <ul>
+          
+      <li *ngFor="let tweet of tweets">
+          <app-fav [isFav] = tweet.IsFav [count] = tweet.count [message] = tweet.message (change)= "onFavChange($event)"></app-fav>     
+      </li>
+    
+    </ul>
+
+  <ul class = "nav nav-pills">
+      
+    <li *ngFor="let tweet of tweets">
+        <a href="">{{tweet.message}}</a>
+    </li>
+  </ul>
+
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUpCasing()">
+    <br/>
+
+    {{email | titleCase}}
+  </div>
+
+</div>
