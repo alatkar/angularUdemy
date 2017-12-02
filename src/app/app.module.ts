@@ -8,6 +8,7 @@ import { FavComponent } from './fav/fav.component';
 import { TitleCasePipe } from './title-case.pipe';
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { CourseFormComponent } from './course-form/course-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     FavComponent,
     TitleCasePipe,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    CourseFormComponent
   ],
   imports: [
     BrowserModule,
